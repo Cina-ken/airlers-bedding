@@ -1,33 +1,32 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Add Link for navigation consistency
-import Slider from 'react-slick'; // Import react-slick
-import 'slick-carousel/slick/slick.css'; // Required CSS
-import 'slick-carousel/slick/slick-theme.css'; // Optional theme CSS
+import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import images from '../assets/images';
 
 const Home = () => {
   // Slider settings
   const sliderSettings = {
-    dots: true, // Show navigation dots
-    infinite: true, // Loop the slides
-    speed: 500, // Transition speed (ms)
-    slidesToShow: 1, // Show one slide at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Auto-play the slider
-    autoplaySpeed: 3000, // 3 seconds per slide
-    arrows: false, // Hide arrows (dots only for navigation)
-    pauseOnHover: true, // Pause autoplay on hover
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    pauseOnHover: true,
   };
 
   // Slider images array
   const sliderImages = [
     { src: images.homeHero, alt: 'Luxury Bedding 1' },
-    { src: images.homeHero1, alt: 'Luxury Bedding 1' },
-    { src: images.homeHero2, alt: 'Luxury Bedding 2' },
-    { src: images.homeHero3, alt: 'Luxury Bedding 3' },
-    { src: images.aboutBedding, alt: 'Luxury Bedding 4' },
-    { src: images.contactImage, alt: 'Luxury Bedding 5' },
-    
+    { src: images.homeHero1, alt: 'Luxury Bedding 2' },
+    { src: images.bedding10, alt: 'Luxury Bedding 3' },
+    { src: images.homeHero3, alt: 'Luxury Bedding 4' },
+    { src: images.aboutBedding, alt: 'Luxury Bedding 5' },
+    { src: images.bedding11, alt: 'Luxury Bedding 6' },
   ];
 
   return (
@@ -56,7 +55,7 @@ const Home = () => {
             </Slider>
           </div>
           <Link
-            to="/listings" // Switch to Link for SPA navigation
+            to="/listings"
             className="mt-8 inline-block bg-gray-800 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition duration-300"
           >
             Shop Now
@@ -89,6 +88,22 @@ const Home = () => {
                 Proudly supplying over 200 bedding sets monthly to hotels and individuals.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* New Image Section */}
+      <section className="py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <img
+              src={images.homeHero || 'https://via.placeholder.com/800x400'}
+              alt="Explore Our Luxury Collection"
+              className="w-full h-auto rounded-lg shadow-md object-cover"
+            />
+            <p className="text-center text-gray-600 mt-4 text-lg">
+              Elevate your bedroom with our handcrafted bedding sets.
+            </p>
           </div>
         </div>
       </section>
