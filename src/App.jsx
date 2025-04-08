@@ -22,6 +22,7 @@ function App() {
           <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/videos" element={<Videos />} />
+          <Route path="*" element={<div>404 - Page Not Found</div>} />
         </Routes>
         </Layout>
       
