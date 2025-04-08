@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Helmet } from 'react-helmet-async';
 import images from '../assets/images';
 
 const Home = () => {
@@ -31,6 +32,13 @@ const Home = () => {
 
   return (
     <div className="font-opensans">
+
+    <Helmet>
+        <title>Airler's Bedding - Home</title>
+        <meta name="description" content="Explore luxury bedding collections at Airler's Bedding, serving Lagos with premium comfort." />
+    </Helmet>
+
+
       {/* Hero Section with Slider */}
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4 text-center">

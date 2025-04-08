@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -12,7 +13,8 @@ import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
-    <Router>
+    <HelmetProvider>
+      <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -26,7 +28,10 @@ function App() {
         </Routes>
         </Layout>
       
-    </Router>
+      </Router>
+
+    </HelmetProvider>
+    
   );
 }
 
